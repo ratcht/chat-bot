@@ -31,12 +31,12 @@ with open(abs_file_path) as f:
 def generate_response(content):
   print("Waiting for GPT")
 
-  #response = openai.ChatCompletion.create(
-  #  model="gpt-3.5-turbo",
-  #  messages=[
-  #      {"role": "system", "content": ""},
-  #      {"role": "user", "content": content}
-  #    ]
-  #)
-  #return response['choices'][0]['message']['content']
-  return "TESTTGSAASG"
+  response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": ""},
+        {"role": "user", "content": content}
+      ]
+  )
+  return response['choices'][0]['message']['content']
+  #return "TESTTGSAASG"

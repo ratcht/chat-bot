@@ -18,8 +18,8 @@
   <body>
     <div class="container">
       <!-- Content here -->
-      <div class="row">
-        <div class="overflow-auto" style="height:400px; background-color: rgba(255,0,0,0.1);">
+      <div class="row" style="margin-top:5%;">
+        <div class="overflow-auto" style="height:400px; background-color: rgba(255,0,0,0.1); padding:2%;">
           
           <div id="chatLoader">
 
@@ -59,6 +59,11 @@
         function newChat() {
           // Get Input box value
           const chatInput = document.getElementById("chatInput").value
+
+          // Clear inputBox
+          document.getElementById("chatInput").value = ""
+
+
           // Update Temp Chat
           document.getElementById("tempChat").innerHTML = chatInput;
 

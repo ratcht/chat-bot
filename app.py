@@ -34,7 +34,6 @@ def chat():
   chat = ChatObject(chat_input, chat_response)
   session_chat.append(chat)
 
-  time.sleep(0.5)
   return json.dumps(chat_input)
 
 # Load from file
