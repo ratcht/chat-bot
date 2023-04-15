@@ -1,0 +1,10 @@
+.promptRow{
+  font-family: KarmaRegular;
+  text-align: left;
+}
+
+.responseRow{
+  font-family: KarmaRegular;
+  color: #6e6e6e;
+  text-align: center;
+}
