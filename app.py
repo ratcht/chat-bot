@@ -3,6 +3,7 @@ import os
 from flask import Flask, redirect, url_for, render_template, request
 from files.chatObject import ChatObject
 from files.gptAPI import generate_response
+import time
 import sys
 
 app = Flask(__name__)
@@ -32,6 +33,8 @@ def chat():
   chat_response = generate_response(chat_input)
   chat = ChatObject(chat_input, chat_response)
   session_chat.append(chat)
+
+  time.sleep(0.5)
   return json.dumps(chat_input)
 
 # Load from file
